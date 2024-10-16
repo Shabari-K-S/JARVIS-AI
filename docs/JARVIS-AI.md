@@ -62,7 +62,7 @@ To use Jarvis, simply speak your command clearly. Here are some examples of what
    - "News about technology in India"
    - "News about tech"
    - "Nation news"
-   - "Entertainment news" 
+   - "Entertainment news"
    - "Sports news"
    - "World news"
    - "Science news"
