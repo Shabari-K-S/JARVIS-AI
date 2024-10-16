@@ -19,7 +19,6 @@ help:
 # Set up virtual environment and install dependencies
 setup:
 	python3 -m venv $(VENV)
-	source $(VENV)/bin/activate
 	$(PIP) install -r requirements.txt
 	$(PIP) install flake8 black pytest
 	$(PYTHON) -m jarvis.config
