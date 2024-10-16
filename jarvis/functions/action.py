@@ -2,9 +2,6 @@ import pyautogui as pg
 from jarvis.needs.audio import text_to_speech, play_audio
 import asyncio
 
-# Flag to control whether the audio should stop or continue
-pause_audio_flag = False
-
 def scroll_down():
     pg.scroll(-10)
 

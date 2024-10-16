@@ -62,6 +62,7 @@ PyScreeze==1.0.1
 pytest==8.3.3
 python-dotenv==1.0.1
 python3-xlib==0.15
+pyttsx3==2.90
 pytweening==1.2.0
 PyYAML==6.0.2
 regex==2024.9.11

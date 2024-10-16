@@ -2,6 +2,7 @@ from jarvis.functions.apps import check_applications
 import speech_recognition as sr
 import threading
 import os
+import sys
 import asyncio
 from PyQt5.QtCore import QTimer
 from jarvis.needs.audio import text_to_speech, play_audio
@@ -71,7 +72,10 @@ class SpeechRecognizer:
             self.img = 0
             image_path = os.listdir("generated_image")
             image_path = image_path[-1]
-            threading.Thread(target=os.system, args=(f"gwenview generated_image/{image_path}",)).start()
+            if sys.platform == "win32":
+                threading.Thread(target=os.system, args=(f"open generated_image/{image_path}",)).start()
+            else:
+                threading.Thread(target=os.system, args=(f"gwenview generated_image/{image_path}",)).start()
 
         if "generate image" in command:
             if self.img == 1:

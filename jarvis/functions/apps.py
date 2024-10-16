@@ -1,33 +1,53 @@
 import os
 import pyautogui as pg
 import time
+import sys
+import webbrowser
 
 def open_instagram():
-    os.system("google-chrome-stable https://www.instagram.com")
+    webbrowser.open("https://www.instagram.com")
 
 def open_whatsapp():
-    os.system("google-chrome-stable https://web.whatsapp.com")
+    webbrowser.open("https://www.whatsapp.com")
 
 def open_gmail():
-    os.system("google-chrome-stable https://mail.google.com")
+    webbrowser.open("https://mail.google.com")
 
 def open_youtube():
-    os.system("google-chrome-stable https://www.youtube.com")
+    webbrowser.open("https://www.youtube.com")
 
 def open_google():
-    os.system("google-chrome-stable https://www.google.com")
+    webbrowser.open("https://www.google.com")
 
 def open_file_explorer():
-    os.system("nautilus")
+    if sys.platform == "win32":
+        pg.hotkey('win', 'e')
+    else:
+        os.system("nautilus")
 
 def open_vs_code():
-    os.system("code")
+    if sys.platform == "win32":
+        pg.press('win')
+        pg.write("vscode")
+        pg.press('enter')
+    else:
+        os.system("code")
 
 def open_terminal():
-    os.system("gnome-terminal")
+    if sys.platform == "win32":
+        pg.press('win')
+        pg.write("cmd")
+        pg.press('enter')
+    else:
+        os.system("gnome-terminal")
 
 def open_vs_code_for_project():
-    os.system("code")
+    if sys.platform == "win32":
+        pg.press('win')
+        pg.write("vscode")
+        pg.press('enter')
+    else:
+        os.system("code")
     time.sleep(0.5)
     pg.keyDown('ctrl')
     pg.press('k')
@@ -35,13 +55,13 @@ def open_vs_code_for_project():
     pg.keyUp('ctrl')
 
 def open_github():
-    os.system("google-chrome-stable https://github.com")
+    webbrowser.open("https://github.com")
 
 def open_linkedin():
-    os.system("google-chrome-stable https://www.linkedin.com")
+    webbrowser.open("https://www.linkedin.com")
 
 def open_spotify():
-    os.system("google-chrome-stable https://open.spotify.com")
+    webbrowser.open("https://open.spotify.com")
 
 def check_applications(command):
     if "instagram" in command.lower():
