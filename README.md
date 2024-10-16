@@ -15,3 +15,7 @@
 - **Edge Text-to-Speech (edge-tts)** for generating speech output
 - **Gemini API** for processing prompt
 
+Here’s the updated version of your note for clarity:
+
+> **Note**  
+> Currently, Jarvis AI is available only for Linux. Support for Windows and macOS will be added in a future update.
