@@ -20,7 +20,7 @@ class AI:
 
         model = genai.GenerativeModel("gemini-1.5-flash", generation_config=generation_config)
 
-        with open('datas.pkl', 'rb') as file:
+        with open('./jarvis/data/datas.pkl', 'rb') as file:
             loaded_data = pickle.load(file)
 
         self.chat = model.start_chat(history=[])

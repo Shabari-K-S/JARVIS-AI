@@ -2,7 +2,8 @@ from diffusers import DiffusionPipeline
 import os
 import sys
 import edge_tts
-import pyttsx3
+if sys.platform == "win32":
+    import pyttsx3
 
 # Function to convert text to speech and save it as an MP3 file using edge_tts
 async def text_to_speech(text, output_file="output.mp3"):
